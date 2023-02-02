@@ -1,7 +1,8 @@
-import React,{ useEffect,useState,Component} from 'react';
+import React,{ Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown} from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
+import { NavLink } from 'react-router-dom';
+
 import './baseview.scss';
 
 class Baseview extends Component {
@@ -31,7 +32,7 @@ class Baseview extends Component {
         }
         return(
             <header id="masthead" className="site-header">
-                <a className="home-link" href="/" title="">
+                <a className="home-link" href="/" title="Giphy Demo">
                     <h1 className="site-title"> Giphy Trending Gifs</h1>
                     <h2 className="site-description"></h2>
                 </a>
@@ -42,7 +43,8 @@ class Baseview extends Component {
                         <a className="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
                         <div className="menu-container">
                             <ul id="primary-menu" onClick={(event) => this.closeMenu(event)} className={`nav-menu ${this.state.toggleClass ? "active" : "inactive"}`}>
-                                <li id="menu-item-31" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-30 current_page_item menu-item-31"></li>
+                                <li  className=""><NavLink exact="true" activeclassname="selectedLink" to="/search-gif/">Search Gifs on GIPHY</NavLink></li>
+                                <li  className=""><NavLink exact="true" activeclassname="selectedLink" to="/random-gif/">Get a Random Gif</NavLink></li>
                             </ul>
                         </div> 
                     </nav>

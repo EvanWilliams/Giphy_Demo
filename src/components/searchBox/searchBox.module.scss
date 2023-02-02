@@ -2,10 +2,10 @@
     display: grid;
     background-color:#d8d8d8;
     grid-template-columns: repeat(2,minmax(450px, 1fr));
-    grid-template-gap: 5px;
     grid-column-gap: 5px;
     grid-row-gap: 10px;
     padding-top: 25px;
+    min-height: 900px;
 }
 .banner-element{
     min-height:200px;

@@ -30,7 +30,7 @@ const SearchBox = () => {
                         <ImageContainer
                             title={""}
                             image={el.images.fixed_height.url}
-                            caption={""}/>
+                            caption={el.title}/>
                         
                     </div>  
                 )
