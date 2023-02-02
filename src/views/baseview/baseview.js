@@ -32,13 +32,13 @@ class Baseview extends Component {
         }
         return(
             <header id="masthead" className="site-header">
-                <a className="home-link" href="/" title="Giphy Demo">
+                <a className="home-link" href="/search-gif" title="Giphy Demo">
                     <h1 className="site-title"> Giphy Trending Gifs</h1>
                     <h2 className="site-description"></h2>
                 </a>
 
                 <div id="navbar" className="navbar">
-                    <nav id="site-navigation" className="navigation main-navigation" role="navigation">
+                    <nav id="site-navigation" className="navigation main-navigation">
                     <button onClick={(event) => this.handleClick(event)} className={`menu-toggle ${this.state.toggleClass ? "active" : "inactive"}`}>Menu {caret}</button>
                         <a className="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
                         <div className="menu-container">
