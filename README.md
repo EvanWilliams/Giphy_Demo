@@ -1,5 +1,7 @@
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this project, you need to first navigate to the root directory where the package.json file is and run 'npm install'
+
+Once this process has completed you need to run the 'npm start' command to start running the app locally.
 
 ## Available Scripts
 
