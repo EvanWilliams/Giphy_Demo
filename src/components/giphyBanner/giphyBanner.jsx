@@ -1,19 +1,18 @@
 import React,{ useEffect,useState} from 'react';
-import axios from 'axios';
+
 import classes from './giphyBanner.module.scss';
+import post from '../../services/axios/post/post';
 
 
 const GiphyBanner = () => {
     const [data,setData] = useState([])
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios('https://api.giphy.com/v1/gifs/trending', {
-            params:{
+            const response = await post('https://api.giphy.com/v1/gifs/trending', {
                     'api_key':'YDXFn0LazKqfuxSxYwpNYxQYhfuWZqLi'
-                }
-            });
+                });
 
-            setData(response.data.data);
+            setData(response.data);
         };
         fetchData();
     },[]);

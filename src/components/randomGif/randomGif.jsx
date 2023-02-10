@@ -1,6 +1,8 @@
 import React,{ useState} from 'react';
-import axios from 'axios';
+
+import post from '../../services/axios/post/post'; 
 import classes from './randomGif.module.scss';
+
 import ImageContainer from '../../containers/imageContainer/imageContainer';
 
 const RandomGif = () => {
@@ -8,14 +10,12 @@ const RandomGif = () => {
     const[Rating, setRating] = useState("g");
     const handleSubmit = (event) => {
         const fetchData = async () => {
-            const response = await axios('https://api.giphy.com/v1/gifs/random', {
-            params:{
-                    'rating':Rating,
-                    'api_key':'YDXFn0LazKqfuxSxYwpNYxQYhfuWZqLi'
-                }
+            const response = await post('https://api.giphy.com/v1/gifs/random',{
+                'rating':Rating,
+                'api_key':'YDXFn0LazKqfuxSxYwpNYxQYhfuWZqLi'
             });
            
-            setData(response.data.data);
+            setData(response.data);
         };
         fetchData();
     }
