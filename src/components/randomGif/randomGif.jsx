@@ -7,7 +7,7 @@ import ImageContainer from '../../containers/imageContainer/imageContainer';
 
 const RandomGif = () => {
     const [data,setData] = useState(undefined)
-    const[Rating, setRating] = useState("g");
+    const [Rating, setRating] = useState("g");
     const handleSubmit = (event) => {
         const fetchData = async () => {
             const response = await post('https://api.giphy.com/v1/gifs/random',{

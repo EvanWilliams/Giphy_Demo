@@ -11,7 +11,7 @@ const GiphyBanner = () => {
             const response = await post('https://api.giphy.com/v1/gifs/trending', {
                     'api_key':'YDXFn0LazKqfuxSxYwpNYxQYhfuWZqLi'
                 });
-
+            console.log(response.error);
             setData(response.data);
         };
         fetchData();
